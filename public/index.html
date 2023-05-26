@@ -22,6 +22,7 @@
     <script src="./app/snake.js" defer></script>
     <script src="./app/calendar.js" defer></script>
     <script src="./app/darkmode.js" defer></script>
+    <script src="./app/send-message.js" defer></script>
     <title>My Portfolio</title>
   </head>
   <body>
@@ -514,21 +515,23 @@
       <section class="contact-section disabled" id="contact">
         <div class="grid grid-1 message">
           <h1>Send me message</h1>
-          <form action="" class="message-form">
-            <div class="input-control sender-info">
-              <input type="text" required placeholder="YOUR NAME" />
-              <input type="email" required placeholder="YOUR EMAIL" />
-            </div>
-            <div class="input-control">
-              <input type="text" required placeholder="ENTER SUBJECT" />
-            </div>
-            <div class="input-control">
-              <textarea
-                rows="9"
-                placeholder="TELL ME YOUR THOUGHTS..."
-              ></textarea>
-            </div>
+          <form class="message-form">
+            <input type="text" name="name" required placeholder="YOUR NAME" />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="YOUR EMAIL"
+            />
+            <input type="text" name="subject" placeholder="ENTER SUBJECT" />
+            <textarea
+              name="content"
+              rows="9"
+              placeholder="TELL ME YOUR THOUGHTS..."
+              required
+            ></textarea>
             <button>SEND</button>
+            <span id="send-result"></span>
           </form>
         </div>
         <div class="grid grid-2">Contact info</div>
