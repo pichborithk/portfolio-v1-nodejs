@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+@function rem($pixels, $context: 16) {
+  @return calc($pixels / $context) * 1rem;
+}
+
+@mixin display-flex($a: center, $j: center) {
+  display: flex;
+  align-items: $a;
+  justify-content: $j;
+}
+
+@mixin gradient-text($first-color, $second-color, $direction: left) {
+  background: -webkit-linear-gradient($direction, $first-color, $second-color);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}

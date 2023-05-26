@@ -1,0 +1,65 @@
+.skills-section {
+  .skills-progress {
+    @include display-flex(center, flex-start);
+    flex-direction: column;
+    padding: rem(20) rem(60);
+    gap: rem(20);
+    max-height: 80vh;
+
+    h1 {
+      @include gradient-text($support-color, $primary-color);
+      font-family: Gilroy-ExtraBold;
+      font-size: rem(40);
+    }
+
+    .skills {
+      @include display-flex(center, flex-start);
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: rem(10);
+      width: 100%;
+      overflow: auto;
+      .skill {
+        &.html {
+          @include skill-bar(95%);
+        }
+        &.css {
+          @include skill-bar(90%);
+        }
+        &.js {
+          @include skill-bar(90%);
+        }
+        &.typescript {
+          @include skill-bar(85%);
+        }
+        &.react {
+          @include skill-bar(90%);
+        }
+        &.redux {
+          @include skill-bar(75%);
+        }
+        &.sass {
+          @include skill-bar(85%);
+        }
+        &.tailwind {
+          @include skill-bar(90%);
+        }
+        &.node {
+          @include skill-bar(80%);
+        }
+        &.express {
+          @include skill-bar(85%);
+        }
+        &.postgres {
+          @include skill-bar(85%);
+        }
+        &.mongodb {
+          @include skill-bar(85%);
+        }
+        &.next {
+          @include skill-bar(70%);
+        }
+      }
+    }
+  }
+}

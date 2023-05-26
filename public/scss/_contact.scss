@@ -1,0 +1,61 @@
+.contact-section {
+  grid-template-columns: 1fr 1fr;
+  .message {
+    @include display-flex(center, flex-start);
+    flex-direction: column;
+    padding: rem(40) rem(20);
+
+    h1 {
+      font-family: Gilroy-ExtraBold;
+      font-size: rem(40);
+      @include gradient-text($primary-color, $support-color, top);
+    }
+
+    .message-form {
+      @include display-flex;
+      flex-direction: column;
+      gap: rem(20);
+      margin-top: rem(20);
+      width: 80%;
+      .input-control {
+        width: 100%;
+        input,
+        textarea {
+          border-radius: 30px;
+          font-weight: inherit;
+          font-size: inherit;
+          font-family: inherit;
+          padding: rem(10) rem(20);
+          outline: transparent;
+          border: none;
+          background-color: var(--grey-5-color);
+          width: 100%;
+          color: $white-color;
+          resize: none;
+        }
+      }
+      .sender-info {
+        display: flex;
+        gap: rem(20);
+      }
+      button {
+        text-align: center;
+        font-weight: 900;
+        font-size: inherit;
+        font-family: inherit;
+        padding: rem(10) rem(20);
+        outline: transparent;
+        background-color: var(--grey-5-color);
+        color: $white-color;
+        border-radius: 30px;
+        cursor: pointer;
+        align-self: flex-end;
+        width: 30%;
+        &:hover {
+          background-color: $white-color;
+          color: var(--grey-5-color);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+@font-face {
+  font-family: Gilroy-ExtraBold;
+  src: url(../asset/fonts/Gilroy-ExtraBold.otf);
+  font-style: normal;
+}
+
+html {
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  // font-family: 'Vollkorn', serif;
+  // font-family: 'DM Serif Display', serif;
+  // font-family: 'Merriweather', serif;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  font-family: inherit;
+  text-decoration: none;
+}

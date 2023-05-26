@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/80cf46abd0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app/controller.js" defer></script>
+    <script src="./app/carousel-image.js" defer></script>
+    <script src="./app/snake.js" defer></script>
+    <script src="./app/calendar.js" defer></script>
+    <script src="./app/darkmode.js" defer></script>
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div class="welcome-board">
+        <h1>Welcome...</h1>
+        <div class="welcome-piece p1"></div>
+        <div class="welcome-piece p2"></div>
+        <div class="welcome-piece p3"></div>
+        <div class="welcome-piece p4"></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <!--                                         Controller                                          -->
+      <!-- ------------------------------------------------------------------------------------------- -->
+
+      <div class="controller">
+        <div>
+          <p class="active" data-id="home">Home</p>
+          <p data-id="skills">Skills</p>
+          <p data-id="history">Experience</p>
+          <p data-id="projects">Projects</p>
+          <p data-id="contact">Contact</p>
+        </div>
+        <div class="switch-button">
+          <i class="fa-solid fa-sharp fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </div>
+      </div>
+      <!-- --------------------------------------- Controller ---------------------------------------- -->
+
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <!--                                        Home Section                                         -->
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <section class="home-section" id="home">
+        <div class="grid grid-1 carousel">
+          <div class="carousel-btn">
+            <button class="btn-1" data-carousel-btn="0" data-active></button>
+            <button class="btn-2" data-carousel-btn="1"></button>
+            <button class="btn-3" data-carousel-btn="2"></button>
+          </div>
+          <ul>
+            <li class="slide-img" data-active>
+              <img src="./asset/img/1.png" alt="img-1" />
+            </li>
+            <li class="slide-img">
+              <img src="./asset/img/2.jpg" alt="img-2" />
+            </li>
+            <li class="slide-img">
+              <img src="./asset/img/Ankor Wat.JPG" alt="img-3" />
+            </li>
+          </ul>
+        </div>
+
+        <div class="grid grid-2 calendar">
+          <div class="calendar-face calendar-display active">
+            <div>
+              <p id="day"></p>
+              <i class="fa-solid fa-rotate"></i>
+            </div>
+            <h1 id="date"></h1>
+            <div>
+              <p id="month"></p>
+              <p id="year"></p>
+            </div>
+          </div>
+          <div class="clock-face calendar-display">
+            <div>
+              <i class="fa-solid fa-rotate"></i>
+            </div>
+            <h1 id="clock">
+              <span id="hour">15</span> : <span id="minute">28</span>
+            </h1>
+          </div>
+        </div>
+
+        <div class="grid grid-3 game">
+          <div class="game-body">
+            <div>
+              <button id="game-start">START</button>
+              <h2>Point: <span id="current-points">----</span></h2>
+              <select id="game-difficulty">
+                <option value="300">Easy</option>
+                <option value="200" selected>Normal</option>
+                <option value="100">Hard</option>
+                <option value="60">Expert</option>
+              </select>
+            </div>
+            <table>
+              <tbody id="game-board"></tbody>
+            </table>
+            <div>
+              <h2>AVG Score: <span id="game-avg">--</span></h2>
+              <h2>Best Score: <span id="game-best">--</span></h2>
+            </div>
+          </div>
+          <div class="game-banner">
+            <h3>Game Over!!!</h3>
+            <h3>Your Snake Length is: <span id="snake-length"></span></h3>
+            <h3>Your Point is: <span id="game-point"></span></h3>
+            <button>Try Again ?</button>
+          </div>
+        </div>
+        <div class="grid grid-4 about">
+          <p>Hi, My name is</p>
+          <h1>Pichborith Kong</h1>
+          <p>
+            Passionate engineer, with curious mind and constant learning
+            attitude. Proficient in working knowledge of Front End Developer.
+          </p>
+          <div class="download-cv">
+            <a
+              href="./asset/resume/resume5.pdf"
+              class="download-btn"
+              download="Pichborith Resume"
+            >
+              <span>Download CV</span>
+              <p>
+                <i class="fa-solid fa-download"></i>
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- -------------------------------------- Home Section --------------------------------------- -->
+
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <!--                                       Skills Section                                        -->
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <section class="skills-section disabled" id="skills">
+        <div class="grid grid-1 skills-progress">
+          <h1>Tech Stack</h1>
+          <div class="skills">
+            <div class="skill html">
+              <div>
+                <i class="devicon-html5-plain"></i>
+              </div>
+              <div>
+                <span>HTML</span>
+                <span>95%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill css">
+              <div>
+                <i class="devicon-css3-plain"></i>
+              </div>
+              <div>
+                <span>CSS</span>
+                <span>90%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill js">
+              <div>
+                <i class="devicon-javascript-plain"></i>
+              </div>
+              <div>
+                <span>JAVASCRIPT</span>
+                <span>90%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill typescript">
+              <div>
+                <i class="devicon-typescript-plain"></i>
+              </div>
+              <div>
+                <span>TYPESCRIPT</span>
+                <span>85%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill react">
+              <div>
+                <i class="devicon-react-original"></i>
+              </div>
+              <div>
+                <span>REACT.JS</span>
+                <span>90%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill redux">
+              <div>
+                <i class="devicon-redux-original"></i>
+              </div>
+              <div>
+                <span>REDUX</span>
+                <span>75%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill sass">
+              <div>
+                <i class="devicon-sass-original"></i>
+              </div>
+              <div>
+                <span>SASS</span>
+                <span>85%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill tailwind">
+              <div>
+                <i class="devicon-tailwindcss-plain"></i>
+              </div>
+              <div>
+                <span>TAILWIND CSS</span>
+                <span>90%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill node">
+              <div>
+                <i class="devicon-nodejs-plain"></i>
+              </div>
+              <div>
+                <span>NODE.JS</span>
+                <span>80%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill express">
+              <div>
+                <i class="devicon-express-original"></i>
+              </div>
+              <div>
+                <span>EXPRESS.JS</span>
+                <span>85%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill postgres">
+              <div>
+                <i class="devicon-postgresql-plain"></i>
+              </div>
+              <div>
+                <span>POSTGRESQL</span>
+                <span>85%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill mongodb">
+              <div>
+                <i class="devicon-mongodb-plain"></i>
+              </div>
+              <div>
+                <span>MONGODB</span>
+                <span>85%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill next">
+              <div>
+                <i class="devicon-nextjs-original"></i>
+              </div>
+              <div>
+                <span>NEXT.JS</span>
+                <span>70%</span>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------- Skills Section -------------------------------------- -->
+
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <!--                                       History Section                                       -->
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <section class="history-section disabled" id="history">
+        <div class="grid grid-1 work-experience">
+          <h2>Work Experience</h2>
+          <div class="work-timeline">
+            <div class="timeline">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <p class="timeline-duration">2019 - 2022</p>
+              <h5>Technical Director of Branch<span> - Metfone</span></h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                amet sapiente exercitationem molestiae.
+              </p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <p class="timeline-duration">2018 - 2019</p>
+              <h5>Technical Operator<span> - Metfone</span></h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                amet sapiente exercitationem molestiae.
+              </p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <p class="timeline-duration">2015 - 2016</p>
+              <h5>Database Assistant<span> - AFRIMS</span></h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                amet sapiente exercitationem molestiae.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-2 eduction">
+          <h2>Eduction</h2>
+          <div class="eduction-timeline">
+            <div class="timeline">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <p class="timeline-duration">2023 - PRESENT</p>
+              <h5>Web Development Immersive</h5>
+              <p>Fullstack Academy, New York United States</p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <p class="timeline-duration">2016 - 2018</p>
+              <h5>Master of Electronics Engineering</h5>
+              <p>Military Technology Academy, Ha Noi Vietnam</p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <p class="timeline-duration">2010 - 2015</p>
+              <h5>Bachelor ofElectrical and Electronics Engineering</h5>
+              <p>Military Technology Academy, Ha Noi Vietnam</p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <p class="timeline-duration">2009 - 2010</p>
+              <h5>Vietnamese Language and Literature</h5>
+              <p>Army Academy 2, Dong Nai Vietnam</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------- History Section ------------------------------------- -->
+
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <!--                                      Projects Section                                       -->
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <section class="projects-section disabled" id="projects">
+        <div class="grid grid-1 my-projects">
+          <h1>Project</h1>
+          <div class="projects">
+            <div class="project">
+              <div class="image">
+                <img
+                  src="//image.thum.io/get/https://fantastic-faloodeh-6ac36e.netlify.app/"
+                  alt="portfolio-img-1"
+                />
+                <div class="hover-items">
+                  <h3>Stranger's Things</h3>
+                  <div class="icons">
+                    <a
+                      href="https://github.com/pichborithk/strangers-things-client"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                    <a
+                      href="https://fantastic-faloodeh-6ac36e.netlify.app/"
+                      target="_blank"
+                      >Website</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div>
+                <i class="devicon-typescript-plain colored"></i>
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-redux-original colored"></i>
+                <i class="devicon-tailwindcss-plain colored"></i>
+                <i class="devicon-express-original colored"></i>
+                <i class="devicon-mongodb-plain-wordmark colored"></i>
+              </div>
+            </div>
+            <div class="project">
+              <div class="image">
+                <img
+                  src="//image.thum.io/get/https://gregarious-eclair-d0c109.netlify.app/"
+                  alt="portfolio-img-3"
+                />
+                <div class="hover-items">
+                  <h3>Art Collector</h3>
+                  <div class="icons">
+                    <a
+                      href="https://github.com/pichborithk/art-collector-redux-typescript"
+                      target="_blank"
+                      >GitHub</a
+                    >
+                    <a
+                      href="https://gregarious-eclair-d0c109.netlify.app/"
+                      target="_blank"
+                    >
+                      Website
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <i class="devicon-typescript-plain colored"></i>
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-sass-original colored"></i>
+                <i class="devicon-redux-original colored"></i>
+              </div>
+            </div>
+            <div class="project">
+              <div class="image">
+                <img src="./asset/img/port5.jpg" alt="portfolio-img-5" />
+                <div class="hover-items">
+                  <h3>Project Source</h3>
+                  <div class="icons">
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank"> Website </a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+              </div>
+            </div>
+            <div class="project">
+              <div class="image">
+                <img src="./asset/img/port4.jpg" alt="portfolio-img-4" />
+                <div class="hover-items">
+                  <h3>Project Source</h3>
+                  <div class="icons">
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Website</a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------------------------------ Projects Section ------------------------------------- -->
+
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <!--                                       Contact Section                                       -->
+      <!-- ------------------------------------------------------------------------------------------- -->
+      <section class="contact-section disabled" id="contact">
+        <div class="grid grid-1 message">
+          <h1>Send me message</h1>
+          <form action="" class="message-form">
+            <div class="input-control sender-info">
+              <input type="text" required placeholder="YOUR NAME" />
+              <input type="email" required placeholder="YOUR EMAIL" />
+            </div>
+            <div class="input-control">
+              <input type="text" required placeholder="ENTER SUBJECT" />
+            </div>
+            <div class="input-control">
+              <textarea
+                rows="9"
+                placeholder="TELL ME YOUR THOUGHTS..."
+              ></textarea>
+            </div>
+            <button>SEND</button>
+          </form>
+        </div>
+        <div class="grid grid-2">Contact info</div>
+      </section>
+      <!-- ------------------------------------- Contact Section ------------------------------------- -->
+    </main>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+.history-section {
+  grid-template-columns: 1fr 1fr;
+
+  .work-experience {
+    @include display-flex(center, flex-start);
+    flex-direction: column;
+    padding: rem(20) rem(20) rem(20) rem(60);
+
+    h2 {
+      font-family: Gilroy-ExtraBold;
+      font-size: rem(32);
+      @include gradient-text($primary-color, $support-color, right);
+    }
+
+    .work-timeline {
+      @include display-flex(flex-start, flex-start);
+      flex-direction: column;
+      border-left: 1px solid $primary-color;
+      margin-top: rem(20);
+      align-self: flex-start;
+
+      .timeline {
+        position: relative;
+        padding-left: rem(45);
+        padding-bottom: rem(10);
+
+        .timeline-icon {
+          @include display-flex;
+          position: absolute;
+          left: -25px;
+          top: 0;
+          background-image: linear-gradient(
+            180deg,
+            $primary-color,
+            $secondary-color
+          );
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+
+          i {
+            font-size: rem(24);
+            color: $white-color;
+          }
+        }
+
+        .timeline-duration {
+          padding: rem(3) rem(10);
+          background-color: var(--grey-3-color);
+          border-radius: 15px;
+          display: inline-block;
+          font-size: rem(14);
+          font-weight: 500;
+        }
+
+        h5 {
+          padding: rem(10) 0;
+          font-size: rem(20);
+          font-weight: 600;
+          @include gradient-text($primary-color, $support-color);
+
+          span {
+            color: var(--grey-2-color);
+            font-weight: 500;
+            font-size: rem(20);
+          }
+        }
+        p {
+          color: var(--grey-2-color);
+        }
+      }
+    }
+  }
+
+  .eduction {
+    @include display-flex(center, flex-start);
+    flex-direction: column;
+    padding: rem(20) rem(20) rem(20) rem(60);
+
+    h2 {
+      font-family: Gilroy-ExtraBold;
+      font-size: rem(32);
+      @include gradient-text($primary-color, $support-color);
+    }
+
+    .eduction-timeline {
+      @include display-flex(flex-start, flex-start);
+      flex-direction: column;
+      border-left: 1px solid $primary-color;
+      margin-top: rem(20);
+      align-self: flex-start;
+      .timeline {
+        position: relative;
+        padding-left: rem(45);
+        padding-bottom: rem(10);
+        .timeline-icon {
+          @include display-flex;
+          position: absolute;
+          left: -25px;
+          top: 0;
+          background-image: linear-gradient(
+            180deg,
+            $primary-color,
+            $secondary-color
+          );
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          i {
+            font-size: rem(24);
+            color: $white-color;
+          }
+        }
+        .timeline-duration {
+          padding: rem(3) rem(10);
+          background-color: var(--grey-3-color);
+          border-radius: 15px;
+          display: inline-block;
+          font-size: rem(14);
+          font-weight: 500;
+        }
+        h5 {
+          padding: rem(10) 0;
+          font-size: rem(20);
+          font-weight: 600;
+          @include gradient-text($primary-color, $support-color, right);
+        }
+        p {
+          color: var(--grey-2-color);
+          font-weight: 500;
+          font-size: rem(20);
+        }
+      }
+    }
+  }
+}

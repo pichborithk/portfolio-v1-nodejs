@@ -1,0 +1,54 @@
+@media only screen and (max-width: 1024px) and (min-width: 835px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 834px) {
+  main {
+    height: fit-content;
+  }
+  .home-section {
+    grid-template-columns: 1fr 1fr;
+    .grid-4 {
+      grid-row: 1;
+    }
+
+    .download-cv {
+      align-self: flex-end;
+    }
+  }
+
+  .skills-section {
+    height: auto;
+    .skills-progress {
+      max-height: none;
+      .skill {
+        min-width: 100% !important;
+      }
+    }
+  }
+
+  .history-section {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-section {
+    height: auto;
+    .my-projects {
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  .contact-section {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  html {
+    font-size: 62.5%;
+  }
+}
