@@ -17,27 +17,22 @@
       gap: rem(20);
       margin-top: rem(20);
       width: 80%;
-      .input-control {
+
+      input,
+      textarea {
+        border-radius: 30px;
+        font-weight: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        padding: rem(10) rem(20);
+        outline: transparent;
+        border: none;
+        background-color: var(--grey-5-color);
         width: 100%;
-        input,
-        textarea {
-          border-radius: 30px;
-          font-weight: inherit;
-          font-size: inherit;
-          font-family: inherit;
-          padding: rem(10) rem(20);
-          outline: transparent;
-          border: none;
-          background-color: var(--grey-5-color);
-          width: 100%;
-          color: $white-color;
-          resize: none;
-        }
+        color: $white-color;
+        resize: none;
       }
-      .sender-info {
-        display: flex;
-        gap: rem(20);
-      }
+
       button {
         text-align: center;
         font-weight: 900;
@@ -55,6 +50,10 @@
           background-color: $white-color;
           color: var(--grey-5-color);
         }
+      }
+
+      #send-result {
+        color: $primary-color;
       }
     }
   }
