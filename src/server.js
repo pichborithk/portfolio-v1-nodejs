@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const { config } = require('./config/default');
 const apiRoutes = require('./routes');
+const { job } = require('./cron.js');
 
 const server = express();
 
@@ -54,6 +55,9 @@ const startServer = () => {
   );
 
   /** Error handling */
+
+  // Cron
+  job.start();
 
   server.listen(config.server.port, () =>
     console.log(`Server is running on port ${config.server.port}`)
